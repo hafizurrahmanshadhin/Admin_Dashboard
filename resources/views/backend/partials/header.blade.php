@@ -4,7 +4,7 @@
             <div class="d-flex">
                 {{-- LOGO --}}
                 <div class="navbar-brand-box horizontal-logo">
-                    <a href="#" class="logo logo-dark">
+                    <a href="{{ route('admin') }}" class="logo logo-dark">
                         <span class="logo-sm">
                             <img src="{{ asset('backend/images/logo-sm.png') }}" alt="" height="22" />
                         </span>
@@ -13,7 +13,7 @@
                         </span>
                     </a>
 
-                    <a href="#" class="logo logo-light">
+                    <a href="{{ route('admin') }}" class="logo logo-light">
                         <span class="logo-sm">
                             <img src="{{ asset('backend/images/logo-sm.png') }}" alt="" height="22" />
                         </span>
@@ -38,7 +38,7 @@
             <div class="d-flex align-items-center">
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">@yield('page_content')</a></li>
                         <li class="breadcrumb-item active">@yield('page_title')</li>
                     </ol>
                 </div>
@@ -77,10 +77,10 @@
                                 class="badge bg-success-subtle text-success mt-1 float-end">New</span><i
                                 class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i>
                             <span class="align-middle">Settings</span></a>
-                        <a class="dropdown-item" href="auth-lockscreen-basic.html"><i
+                        <a class="dropdown-item" href="{{ route('lockscreen') }}"><i
                                 class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i>
                             <span class="align-middle">Lock screen</span></a>
-                        <a class="dropdown-item" href="auth-logout-basic.html"><i
+                        <a class="dropdown-item" href="{{ route('logout') }}"><i
                                 class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
                             <span class="align-middle" data-key="t-logout">Logout</span></a>
                     </div>

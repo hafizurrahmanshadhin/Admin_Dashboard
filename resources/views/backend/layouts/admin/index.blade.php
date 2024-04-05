@@ -3,10 +3,13 @@
 
 
 @section('title')
-    {{ config('app.name') }} | Ecommerce Dashboard
+    {{ config('app.name') }} | Admin
+@endsection
+@section('page_content')
+    Dashboards
 @endsection
 @section('page_title')
-    Ecommerce
+    Admin
 @endsection
 
 
